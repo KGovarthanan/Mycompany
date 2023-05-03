@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('job-1') {
+            steps {
+                echo 'job-1'
+            }
+        }
+        stage('job-2') {
+            steps {
+                echo 'job-2'
+            }
+        }
+    }
+}
