@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('job-1') {
             steps {
-                echo 'job-1'
+                checkout scm
             }
         }
         stage('deploy') {
