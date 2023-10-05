@@ -1,0 +1,18 @@
+pipeline {
+    agent {label "jenkins-agent"}
+
+    stages {
+        stage('job-1') {
+            steps {
+                checkout scm
+            }
+        }
+        stage('deploy') {
+            steps {
+                sh '''
+                sudo cp /var/lib/jenkins/workspace/${JOB_NAME}/index.html /var/www/html/ 
+                '''
+            }
+        }
+    }
+}
