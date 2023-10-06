@@ -2,8 +2,8 @@ pipeline {
     agent {label "jenkins-agent"}
     
     environment {
-        playbookPath = "/var/lib/jenkins/workspace/${JOB_NAME}/Ansible/apache.yml"
-        inventoryPath = "/var/lib/jenkins/workspace/${JOB_NAME}/Ansible/inventory.ini"
+        playbookPath = "/var/lib/jenkins/workspace/${JOB_NAME}/apache.yml"
+        inventoryPath = "/var/lib/jenkins/workspace/${JOB_NAME}/inventory.ini"
     }
     
     stages {
