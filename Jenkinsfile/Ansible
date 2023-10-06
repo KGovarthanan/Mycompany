@@ -1,5 +1,5 @@
 pipeline {
-    agent { label "jenkins-agent" }
+    agent any
     
     environment {
         playbookPath = "/var/lib/jenkins/workspace/${JOB_NAME}/apache.yml"
