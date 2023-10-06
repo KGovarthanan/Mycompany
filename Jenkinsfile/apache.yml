@@ -1,0 +1,6 @@
+- name: This is to install git and httpd
+  hosts: Dev
+  user: ansible
+  become: yes
+  roles:
+   - role: httpd
