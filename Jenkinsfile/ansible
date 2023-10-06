@@ -2,7 +2,7 @@ pipeline {
     agent {label "jenkins-agent"}
     
     environment {
-        playbookPath = "/var/lib/jenkins/workspace/${JOB_NAME}/Ansible/Dev/APP/app_deployment.yml"
+        playbookPath = "/var/lib/jenkins/workspace/${JOB_NAME}/Ansible/Dev/APP/apache.yml"
         inventoryPath = "/var/lib/jenkins/workspace/${JOB_NAME}/Ansible/Dev/inventory.ini"
     }
     
