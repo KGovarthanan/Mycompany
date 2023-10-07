@@ -1,11 +1,12 @@
 ---
-- name: This is to install git and httpd
+- name: Install Git and HTTPD
   hosts: Dev
-  user: ansible
   become: yes
+  become_user: ansible
   tasks:
-    - name: Install git and httpd
-      yum: pkg={{item}} state=installed
-      with_items:
-        - httpd
-        - git
+    - name: Install Git and HTTPD packages
+      package:
+        name:
+          - httpd
+          - git
+        state: installed
