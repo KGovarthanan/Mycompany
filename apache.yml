@@ -5,7 +5,7 @@
   gather_facts: yes
   tasks:
     - name: install httpd
-      yum: pkg=httpd state=installed
+      dnf: pkg=httpd state=installed
     - name: pausing
       pause:
        prompt: "Prompt mesaage"    
