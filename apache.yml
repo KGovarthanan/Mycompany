@@ -4,9 +4,9 @@
   become: yes
   become_user: ansible
   tasks:
-    - name: Install Git and HTTPD packages
+ - name: Install Apache HTTP server
       package:
-        name:
-          - httpd
-          - git
-        state: installed
+        name: httpd
+        state: present
+
+
