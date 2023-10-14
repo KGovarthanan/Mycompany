@@ -10,7 +10,7 @@ pipeline {
                     
                     def csvData = readFile(filePath)
                     def rows = csvData.tokenize('\n')
-                    def headers = rows[0].tokenize(',')
+                    def headers = rows[0].tokenize('a')
                     
                     echo "CSV File Contents:"
                     echo "Headers: ${headers.join(', ')}"
