@@ -1,0 +1,17 @@
+apiVersion: apps/V1
+kind:   Service
+metadata:
+  name: tech-service 
+  lables:
+     app: techapp
+
+spec:
+  selector:
+    matchlabels:
+      app: techapp
+
+ ports: 
+        port: 8080
+      - containerPort: 8080
+
+type: LoadBalancer
