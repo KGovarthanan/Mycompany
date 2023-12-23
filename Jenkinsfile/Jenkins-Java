@@ -23,7 +23,7 @@ stages {
     }
 stage("test")
 {
-    step{
+    steps{
        sh "mvn test"
        sh "ls /var/lib/jenkins/workspace/${JOB_NAME}/webpage/target/"
     }
