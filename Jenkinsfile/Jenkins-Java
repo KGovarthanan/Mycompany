@@ -2,8 +2,8 @@ pipeline {
     agent any
     environment {
 
-APP_NAME = "devops"
-RELEASE = "4.0.0"
+APP_NAME = "gv_webapp"
+RELEASE = "1.0.0"
 DOCKER_USR = "govarthanank"
 DOCKERHUB_CREDENTIALS = credentilas{'dockerhub'}
 IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
@@ -22,7 +22,7 @@ stages {
         }
     }
 stage("test")
-{a
+{
     step{
        sh "mvn test"
        sh "ls /var/lib/jenkins/workspace/${JOB_NAME}/webpage/target/"
